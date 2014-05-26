@@ -15,6 +15,8 @@ pkg_install nodejs
 pkg_get toolchain
 
 echo "[stage0] end of stage0"
-# node $boot_sysroot(toolchain/scripts/stage1.js
 
-cd $boot_sysroot/toolchain/
+. ./initpath.sh
+node $boot_sysroot/toolchain/scripts/stage1.js
+
+cd "$boot_sysroot/toolchain/"
