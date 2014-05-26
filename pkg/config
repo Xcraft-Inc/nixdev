@@ -1,0 +1,2 @@
+boot_build=$(pwd)/build
+boot_sysroot=$(pwd)/sysroot
