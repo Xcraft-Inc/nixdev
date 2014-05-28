@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Enter your git.epsitec.ch username:"
 read username

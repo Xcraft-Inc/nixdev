@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cd "$pkg_dst"
 make install

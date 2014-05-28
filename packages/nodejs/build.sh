@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cd "$boot_build/nodejs/"
 ./configure --prefix="$boot_sysroot"

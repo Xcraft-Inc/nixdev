@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git clone "$pkg_src" "$pkg_dst"
 
