@@ -2,4 +2,4 @@
 
 echo "Bootstrap..."
 
-. ./bootstrap-nodejs.sh
+. ./bootstrap-nodejs.sh $@
