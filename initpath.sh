@@ -31,6 +31,8 @@ else
     [ "$input" != y ] && exit 0
   fi
   rm -f "$HOME/bin/node"
+  rm -f "$HOME/bin/npm"
 fi
 
 ln -s "$(pwd)/sysroot/bin/node" "$HOME/bin/node"
+ln -s "$(pwd)/sysroot/bin/npm" "$HOME/bin/npm"
