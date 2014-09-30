@@ -70,7 +70,7 @@ function pkg_cache()
 
   pkg_get $package
 
-  . ./packages/$package/cache.sh
+  . ./packages/$package/cache
 
   rm -r $boot_build
 }
