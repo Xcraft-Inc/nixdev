@@ -1,6 +1,0 @@
-pkg_ver=v0.10.30
-pkg_src=https://github.com/QJonny/CTT_Rolle_Website.git
-pkg_dst=$boot_build/nodejs
-pkg_cache=$boot_cache/nodejs
-
-#https://github.com/joyent/node.git

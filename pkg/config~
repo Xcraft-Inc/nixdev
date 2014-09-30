@@ -1,5 +1,0 @@
-boot_build=$(pwd)/build
-boot_sysroot=$(pwd)/sysroot
-boot_cache=$(pwd)/pkg_cache
-
-boot_nproc=$(nproc 2>/dev/null || sysctl hw.ncpu | awk '{print $2}')
