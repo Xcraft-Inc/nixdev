@@ -15,5 +15,17 @@ else
     location=gitlab-ci-token:$pkg_ci_token
   fi
 
-  git clone "https://$location@$pkg_src" "$pkg_dst"
+  tries=3
+
+  while [ $tries -gt 0 ]
+  do
+    git clone "https://$location@$pkg_src" "$pkg_dst"
+
+    if [ $? == 0 ]; then
+      break
+    fi
+
+    tries=$(( $tries - 1 ))
+
+  done
 fi
