@@ -17,15 +17,10 @@ else
 
   tries=3
 
-  while [ $tries -gt 0 ]
-  do
+  while [ "$tries" -gt 0 ]; do
     git clone "https://$location@$pkg_src" "$pkg_dst"
+    [ "$?" = 0 ] && break
 
-    if [ $? == 0 ]; then
-      break
-    fi
-
-    tries=$(( $tries - 1 ))
-
+    tries=$((tries - 1))
   done
 fi
