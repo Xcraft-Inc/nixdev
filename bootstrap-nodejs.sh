@@ -33,7 +33,7 @@ function boot_dist()
   pkg_cache toolchain
 }
 
-if [ $# == "1" ] && [ $1 == "dist" ]; then
+if [ "$#" = 1 ] && [ "$1" = dist ]; then
   boot_dist
 else
   boot_normal
