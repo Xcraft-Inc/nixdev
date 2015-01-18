@@ -21,7 +21,7 @@ function boot_normal()
   echo "[stage0] end of stage0"
 
   . ./initpath.sh $quiet
-  node "$boot_sysroot/toolchain/usr/lib/xcraft/stage1.js" "$boot_sysroot/bin"
+  node "$boot_sysroot/toolchain/lib/xcraft/stage1.js" "$boot_sysroot/bin"
 
   cd "$boot_sysroot/toolchain/"
 }
