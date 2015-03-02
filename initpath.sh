@@ -9,4 +9,4 @@ function pathadd()
   fi
 }
 
-pathadd "$boot_sysroot/bin"
+pathadd "$boot_sysroot/usr/bin"
