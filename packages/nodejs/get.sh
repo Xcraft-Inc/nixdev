@@ -3,9 +3,5 @@
 if [ -d "$pkg_cache" ]; then
   cp -r "$pkg_cache" "$pkg_dst"
 else
-  git clone "$pkg_src" "$pkg_dst"
-
-  cd "$pkg_dst"
-  git checkout tags/$pkg_ver
-  cd -
+  git clone -b $pkg_ver --depth 1 "$pkg_src" "$pkg_dst"
 fi
