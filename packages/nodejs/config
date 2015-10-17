@@ -1,5 +1,4 @@
-pkg_ver=v0.12.4
+pkg_ver=v0.12.7
 pkg_src=https://github.com/joyent/node.git
 pkg_dst=$boot_build/nodejs
 pkg_cache=$boot_cache/nodejs
-
