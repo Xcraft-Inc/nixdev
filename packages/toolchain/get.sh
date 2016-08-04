@@ -18,7 +18,7 @@ else
   tries=3
 
   while [ "$tries" -gt 0 ]; do
-    git clone "https://$location@$pkg_src" "$pkg_dst"
+    git clone --recursive "https://$location@$pkg_src" "$pkg_dst"
     [ "$?" = 0 ] && break
 
     tries=$((tries - 1))
