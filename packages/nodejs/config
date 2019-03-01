@@ -1,4 +1,4 @@
-pkg_ver=v8.12.0
+pkg_ver=v8.15.1
 pkg_src=https://github.com/nodejs/node.git
 pkg_dst=$boot_build/nodejs
 pkg_cache=$boot_cache/nodejs
