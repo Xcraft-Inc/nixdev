@@ -8,6 +8,8 @@ function boot_normal()
 {
   echo "[stage0] begin of stage0"
 
+  export CFLAGS="-O2 -g0 -mtune=native" CXXFLAGS="-O2 -g0 -mtune=native"
+
   pkg_uninstall nodejs
   pkg_remove sysroot
   pkg_install sysroot
@@ -17,6 +19,8 @@ function boot_normal()
   pkg_install nodejs
 
   pkg_get toolchain
+
+  unset CFLAGS CXXFLAGS
 
   echo "[stage0] end of stage0"
 
