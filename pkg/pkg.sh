@@ -6,57 +6,57 @@ function pkg_uninstall()
 {
   local package=$1
 
-  . ./packages/$package/config
+  . "./packages/$package/config"
 
   echo "[stage0:$package] uninstall"
-  . ./packages/$package/uninstall.sh
+  . "./packages/$package/uninstall.sh"
 }
 
 function pkg_install()
 {
   local package=$1
 
-  . ./packages/$package/config
+  . "./packages/$package/config"
 
   echo "[stage0:$package] install"
-  . ./packages/$package/install.sh
+  . "./packages/$package/install.sh"
 }
 
 function pkg_remove()
 {
   local package=$1
 
-  . ./packages/$package/config
+  . "./packages/$package/config"
 
   echo "[stage0:$package] remove"
-  . ./packages/$package/remove.sh
+  . "./packages/$package/remove.sh"
 }
 
 function pkg_get()
 {
   local package=$1
 
-  . ./packages/$package/config
+  . "./packages/$package/config"
 
   echo "[stage0:$package] get"
-  . ./packages/$package/get.sh
+  . "./packages/$package/get.sh"
 }
 
 function pkg_build()
 {
   local package=$1
 
-  . ./packages/$package/config
+  . "./packages/$package/config"
 
   echo "[stage0:$package] build"
-  . ./packages/$package/build.sh
+  . "./packages/$package/build.sh"
 }
 
 function pkg_cache()
 {
   local package=$1
 
-  . ./packages/$package/config
+  . "packages/$package/config"
 
   echo "[stage0:$package] cache"
 
@@ -68,10 +68,10 @@ function pkg_cache()
     mkdir "$boot_build"
   fi
 
-  pkg_get $package
+  pkg_get "$package"
 
-  . ./packages/$package/cache.sh
+  . "./packages/$package/cache.sh"
 
-  rm -r $boot_build
+  rm -r "$boot_build"
 }
 

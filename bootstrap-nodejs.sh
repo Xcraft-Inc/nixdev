@@ -27,7 +27,7 @@ function boot_normal()
   . ./initpath.sh $quiet
   node "$boot_sysroot/toolchain/lib/xcraft/stage1.js" "$boot_sysroot/usr/bin"
 
-  cd "$boot_sysroot/toolchain/"
+  cd "$boot_sysroot/toolchain/" || return
 }
 
 function boot_dist()
@@ -37,6 +37,8 @@ function boot_dist()
   pkg_cache toolchain
 }
 
-[ "$#" = 1 -a "$1" = dist ] \
-  && boot_dist \
-  || boot_normal
+if [ $# = 1 ] && [ "$1" = dist ]; then
+  boot_dist
+else
+  boot_normal
+fi

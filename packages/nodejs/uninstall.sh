@@ -2,6 +2,6 @@
 
 [ ! -d "$pkg_dst" ] && return 0
 
-cd "$pkg_dst"
+cd "$pkg_dst" || exit 1
 make uninstall
-cd -
+cd - || exit 1

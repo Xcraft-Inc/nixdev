@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd "$pkg_dst"
+cd "$pkg_dst" || exit 1
 make install
-cd -
+cd - || exit 1
