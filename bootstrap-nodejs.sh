@@ -8,7 +8,7 @@ function boot_normal()
 {
   echo "[stage0] begin of stage0"
 
-  export CFLAGS="-O2 -g0 -mtune=native" CXXFLAGS="-O2 -g0 -mtune=native"
+  export CFLAGS="-O2 -g0 -mtune=native -march=native" CXXFLAGS="-O2 -g0 -mtune=native -march=native"
 
   pkg_uninstall nodejs
   pkg_remove sysroot
