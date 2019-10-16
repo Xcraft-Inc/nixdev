@@ -7,10 +7,17 @@ else
 
   location=
 
+  origin=$(git remote get-url --all origin)
+  protocol=${origin%:*}
+
   if [ "$USER" != "gitlab_ci_runner" ]; then
-    echo "Enter your git.epsitec.ch username:"
-    read -r username
-    location=$username
+    if [ "$protocol" = https ] || [ "$protocol" = http ]; then
+      echo "Enter your git.epsitec.ch username:"
+      read -r username
+      location="https://$username@$pkg_src"
+    else
+      location="git@$pkg_host:$pkg_path"
+    fi
   else
     location=gitlab-ci-token:$pkg_ci_token
   fi
@@ -18,7 +25,7 @@ else
   tries=3
 
   while [ "$tries" -gt 0 ]; do
-    if git clone --recursive "https://$location@$pkg_src" "$pkg_dst"; then
+    if git clone --recursive "$location" "$pkg_dst"; then
       break
     fi
 
