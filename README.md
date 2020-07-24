@@ -1,10 +1,15 @@
-
 # Minimal bootstrapper for Unix-like Toolchain
 
 ## How to bootstrap
 
+```sh
+. ./bootstrap.sh
 ```
-. bootstrap.sh
+
+## How to update
+
+```sh
+./update.sh
 ```
 
 Please, note the dot and the space before the shell script. Otherwise the
