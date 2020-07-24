@@ -10,16 +10,12 @@ else
   origin=$(git remote get-url --all origin)
   protocol=${origin%:*}
 
-  if [ "$USER" != "gitlab_ci_runner" ]; then
-    if [ "$protocol" = https ] || [ "$protocol" = http ]; then
-      echo "Enter your git.epsitec.ch username:"
-      read -r username
-      location="https://$username@$pkg_src"
-    else
-      location="git@$pkg_host:$pkg_path"
-    fi
+  if [ "$protocol" = https ] || [ "$protocol" = http ]; then
+    echo "Enter your git.epsitec.ch username:"
+    read -r username
+    location="https://$username@$pkg_src"
   else
-    location=gitlab-ci-token:$pkg_ci_token
+    location="git@$pkg_host:$pkg_path"
   fi
 
   tries=3
