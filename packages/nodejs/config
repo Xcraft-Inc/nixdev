@@ -1,4 +1,4 @@
-pkg_ver=v12.18.0
+pkg_ver=v12.22.1
 pkg_src=https://github.com/nodejs/node.git
 pkg_dst=$boot_build/nodejs
 pkg_cache=$boot_cache/nodejs
