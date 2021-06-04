@@ -8,7 +8,13 @@ function boot_normal()
 {
   echo "[stage0] begin of stage0"
 
-  export CFLAGS="-O2 -g0 -mtune=native -march=native" CXXFLAGS="-O2 -g0 -mtune=native -march=native"
+  if [ "$(uname -m)" = arm64 ]; then
+    export   CFLAGS="-O2 -g0 -mtune=native"
+    export CXXFLAGS="-O2 -g0 -mtune=native"
+  else
+    export   CFLAGS="-O2 -g0 -mtune=native -march=native"
+    export CXXFLAGS="-O2 -g0 -mtune=native -march=native"
+  fi
 
   pkg_uninstall nodejs
   pkg_remove sysroot
