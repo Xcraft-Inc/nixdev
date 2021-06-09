@@ -1,6 +1,0 @@
-pkg_ver=
-pkg_host=git.epsitec.ch
-pkg_path=toolchain/toolchain.git
-pkg_src=$pkg_host/$pkg_path
-pkg_dst=$boot_sysroot/toolchain
-pkg_cache=$boot_cache/toolchain
