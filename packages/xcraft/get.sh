@@ -3,8 +3,6 @@
 if [ -d "$pkg_cache" ]; then
   cp -r "$pkg_cache" "$pkg_dst"
 else
-  git config --global http.sslVerify false
-
   location=
 
   origin=$(git remote get-url --all origin)
