@@ -5,7 +5,7 @@ if [ -d "$pkg_cache" ]; then
 else
   location=
 
-  origin=$(git remote get-url --all origin)
+  origin=$(git remote get-url origin)
   protocol=${origin%:*}
 
   if [ "$protocol" = https ] || [ "$protocol" = http ]; then
