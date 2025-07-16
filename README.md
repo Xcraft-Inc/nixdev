@@ -1,4 +1,4 @@
-# Minimal bootstrapper for thew Xcraft Unix-like Toolchain
+# Minimal bootstrapper for the Xcraft Unix-like Toolchain
 
 ## How to bootstrap
 
