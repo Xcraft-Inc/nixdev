@@ -9,9 +9,9 @@ else
   protocol=${origin%:*}
 
   if [ "$protocol" = https ] || [ "$protocol" = http ]; then
-    echo "Enter your git.epsitec.ch username:"
-    read -r username
-    location="https://$username@$pkg_src"
+    echo "Enter your $pkg_host login:"
+    read -r login
+    location="https://$login@$pkg_src"
   else
     location="git@$pkg_host:$pkg_path"
   fi
