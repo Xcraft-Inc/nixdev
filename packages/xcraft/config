@@ -1,6 +1,6 @@
 pkg_ver=
-pkg_host=git.epsitec.ch
-pkg_path=xcraft/xcraft.git
+pkg_host=
+pkg_path=
 pkg_src=$pkg_host/$pkg_path
 pkg_dst=$boot_sysroot/xcraft
 pkg_cache=$boot_cache/xcraft
